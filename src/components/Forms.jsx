@@ -6,12 +6,13 @@ function Forms() {
     const [password, setPassword] = useState('')
 
     const data = [name, email, password]
+    const data1 = ['Emmanuel', "kusboat@live.com", 1234]
 
     const handleName =  (e) => setName(e.target.value)
     const handleEmail =  (e) => setEmail(e.target.value)
     const handlePassword =  (e) => setPassword(e.target.value) 
     const handleSubmit = (e) => {
-        console.log(data);
+        data == data1 ? alert(`Welcome, ${name}`) : alert(`Sorry, ${name} does not exist`)
         e.preventDefault();
         
     }   
@@ -37,7 +38,7 @@ function Forms() {
         </div>
         
         <div>
-            <button type='submit' >SUBMIT</button>
+            <button type='submit' >Login</button>
         </div>
         
     </form>
